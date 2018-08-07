@@ -41,8 +41,7 @@ var SpacebookApp = function () {
 
     var post = _findPostById(id);
 
-    posts.splice(posts.indexOf(post), 1);
-    $clickedPost.remove();
+    posts.splice(posts.indexOf(post), 1); 
   };
 
   return {
@@ -67,4 +66,6 @@ $('.add-post').on('click', function () {
 
 $('.posts').on('click', 'a', function () {
   app.removePost(this);
+  
+  app.renderPosts();
 });
